@@ -18,8 +18,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => res.sendFile(__dirname + "/index.html"))
-
 app.post('/pay', (req, res) => {
     const customerInfo = req.body.customer;
     const create_payment_json = {
